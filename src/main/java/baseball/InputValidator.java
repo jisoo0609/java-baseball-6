@@ -28,7 +28,7 @@ public class InputValidator {
         for (char c : input.toCharArray()) {
            int number = Character.getNumericValue(c);
            if (number < 1 || number > 9) {
-               throw new IllegalArgumentException("숫자는 1~9 범위여야 합니다.")
+               throw new IllegalArgumentException("숫자는 1~9 범위여야 합니다.");
            }
         }
     }
