@@ -13,10 +13,11 @@ public class Game {
     // 게임 시작, 루프 실행, 재시작 종료 처리
     public void startGame() {
         System.out.println("숫자 야구 게임을 시작합니다.");
+        // 랜덤 숫자 생성
+        generateComputerNumbers();
 
         // 게임 시작
         while (true) {
-            generateComputerNumbers();
             // 한 턴 동안 사용자 입력 → 판정 → 결과 출력
             System.out.print("숫자를 입력해주세요 : ");
             String userInput = Console.readLine();
