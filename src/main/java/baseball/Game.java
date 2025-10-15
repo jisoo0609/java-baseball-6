@@ -35,8 +35,8 @@ public class Game {
             InputValidator.validate(userInput);
 
             // 판정 계산
-            // strike
-            // ball
+            int strikes = ResultCalculator.calculateStrikes(userInput, computerNumbers);
+            int balls = ResultCalculator.calculateBalls(userInput, computerNumbers);
 
             // 결과 출력
 
