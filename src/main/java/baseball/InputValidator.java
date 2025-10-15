@@ -9,5 +9,12 @@ public class InputValidator {
         checkDuplicate(input);
     }
 
+    public static void checkLength(String input) {
+        if (input.length() != 3) {
+            throw new IllegalArgumentException("입력 길이가 3이 아닙니다.");
+        }
+    }
+
+
 
 }
