@@ -152,3 +152,10 @@ src
 | `feature/result-calculation` | 스트라이크/볼/낫싱 계산 로직          |
 | `feature/output`             | 결과 메시지 출력, 입출력 형식 구현      |
 | `feature/game-loop`          | 게임 루프, 3스트라이크 종료, 재시작 처리  |
+
+## 테스트 결과
+`ApplicationTest`
+- 게임종료 후 재시작
+![게임종료 후 재시작](/src/main/resources/static/img/test1.png)
+- 예외 테스트
+![예외 테스트](/src/main/resources/static/img/test2.png)
