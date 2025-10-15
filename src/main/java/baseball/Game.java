@@ -1,5 +1,6 @@
 package baseball;
 
+import camp.nextstep.edu.missionutils.Console;
 import camp.nextstep.edu.missionutils.Randoms;
 
 import java.util.ArrayList;
@@ -24,12 +25,24 @@ public class Game {
 
         }
 
-        // 한 턴 동안 사용자 입력 → 판정 → 결과 출력
+        // 게임 시작
+        while (true) {
+            // 한 턴 동안 사용자 입력 → 판정 → 결과 출력
+            System.out.print("숫자를 입력해주세요 : ");
+            String userInput = Console.readLine();
 
-        // 3스트라이크인지 체크
+            // TODO 입력 검증
+            // InputValidator.validate(userInput);
 
-        // 1 → 새 게임, 2 → 종료
+            // 판정 계산
+            // strike
+            // ball
 
+            // 결과 출력
+
+            // 3스트라이크인지 체크
+            // 1 → 새 게임, 2 → 종료
+        }
     }
 
 
