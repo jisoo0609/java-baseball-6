@@ -15,6 +15,10 @@ public class InputValidator {
         }
     }
 
-
+    public static void checkDigits(String input) {
+        if (!input.matches("[0-9]+")) {
+            throw new IllegalArgumentException("숫자가 아닌 문자가 포함되어 있습니다.");
+        }
+    }
 
 }
