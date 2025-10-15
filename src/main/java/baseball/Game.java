@@ -39,9 +39,29 @@ public class Game {
             int balls = ResultCalculator.calculateBalls(userInput, computerNumbers);
 
             // 결과 출력
+            if (strikes == 0 && balls == 0) {
+                System.out.println("낫싱");
+            } else if (strikes == 0) {
+                System.out.println(balls + "볼");
+            } else if (balls == 0) {
+                System.out.println(strikes + "스트라이크");
+            } else {
+                System.out.println(balls + "볼 " + strikes + "스트라이크");
+            }
 
             // 3스트라이크인지 체크
-            // 1 → 새 게임, 2 → 종료
+            if (strikes == 3) {
+                System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 종료");
+                System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
+
+                // 1 → 새 게임, 2 → 종료
+                int input = Integer.parseInt(Console.readLine());
+                if (input == 1) {
+                   // 난수 새로 생성
+                } else {
+                    break;
+                }
+            }
         }
     }
 
