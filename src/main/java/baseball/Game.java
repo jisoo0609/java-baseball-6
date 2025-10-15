@@ -14,19 +14,9 @@ public class Game {
     public void startGame() {
         System.out.println("숫자 야구 게임을 시작합니다.");
 
-        // 난수 3개 생성, 중복 제거
-        computerNumbers = new ArrayList<>();
-        while (computerNumbers.size() < 3) {
-            int randomNumber = Randoms.pickNumberInRange(1, 9); // 난수 생성
-            // 만약 computerNumbers에 생성된 randomNumber가 없으면 추가
-            if (!computerNumbers.contains(randomNumber)) {
-                computerNumbers.add(randomNumber);
-            }
-
-        }
-
         // 게임 시작
         while (true) {
+            generateComputerNumbers();
             // 한 턴 동안 사용자 입력 → 판정 → 결과 출력
             System.out.print("숫자를 입력해주세요 : ");
             String userInput = Console.readLine();
@@ -57,7 +47,8 @@ public class Game {
                 // 1 → 새 게임, 2 → 종료
                 int input = Integer.parseInt(Console.readLine());
                 if (input == 1) {
-                   // 난수 새로 생성
+                    // 난수 새로 생성
+                    generateComputerNumbers();
                 } else {
                     break;
                 }
@@ -65,5 +56,15 @@ public class Game {
         }
     }
 
-
+    // 난수 3개 생성 (1~9 중 중복 없이)
+    private void generateComputerNumbers() {
+        computerNumbers = new ArrayList<>();
+        while (computerNumbers.size() < 3) {
+            int randomNumber = Randoms.pickNumberInRange(1, 9); // 난수 생성
+            // 만약 computerNumbers에 생성된 randomNumber가 없으면 추가
+            if (!computerNumbers.contains(randomNumber)) {
+                computerNumbers.add(randomNumber);
+            }
+        }
+    }
 }
