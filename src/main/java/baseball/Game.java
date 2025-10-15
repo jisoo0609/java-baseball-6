@@ -30,15 +30,7 @@ public class Game {
             int balls = ResultCalculator.calculateBalls(userInput, computerNumbers);
 
             // 결과 출력
-            if (strikes == 0 && balls == 0) {
-                System.out.println("낫싱");
-            } else if (strikes == 0) {
-                System.out.println(balls + "볼");
-            } else if (balls == 0) {
-                System.out.println(strikes + "스트라이크");
-            } else {
-                System.out.println(balls + "볼 " + strikes + "스트라이크");
-            }
+            OutputPrinter.outputPrint(strikes, balls);
 
             // 3스트라이크인지 체크
             if (strikes == 3) {
